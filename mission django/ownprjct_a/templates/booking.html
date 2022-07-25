@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%}
+Booking
+{%endblock%}
+
+{% block content%}
+<h1 style="color: red; text-align: center"> MAKE YOUR APPOINMENT </h1>
+<div class=" container  text-center bg-info border border-dark rounded w-50">
+    
+    <form action="" class="  text-center" method="POST">
+        {% csrf_token %}
+        {{form|crispy}} 
+        <br>
+        <button type="submit" class="btn btn-primary">submit</button>
+        <br>
+        <br>
+    </form>
+</div>
+{% endblock %}

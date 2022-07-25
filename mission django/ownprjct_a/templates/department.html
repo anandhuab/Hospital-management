@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Departments
+{%endblock%}
+
+{% block content%}
+<h1 style="color: red" class="text-center">  Departments  </h1>
+<hr>
+
+{%for d in dept %}
+<div class=" mx-auto w-50 bg-primary text-center p-3 my-5 border border-light rounded ">
+    <h1 style="color :aliceblue"><b>{{d.dept_name}}</b></h1>
+    <p style="color: white;">{{d.dept_description}}</p>
+</div>
+{%endfor%}
+{% endblock %}
